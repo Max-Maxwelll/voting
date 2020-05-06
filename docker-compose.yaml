@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:  
+  mongojs:
+    image: mongo
+    container_name: "mongojs"
+    environment:
+        - MONGO_DATA_DIR=/data/db
+        - MONGO_LOG_DIR=/dev/null
+    ports:
+        - "3001:27017"
